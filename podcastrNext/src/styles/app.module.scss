@@ -1,6 +1,7 @@
 .wrapper {
   display: flex;
-  main{
+  overflow-x: hidden;
+  main {
     flex: 1;
   }
 }
