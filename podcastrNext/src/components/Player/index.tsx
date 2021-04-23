@@ -42,7 +42,7 @@ export function Player() {
               <Slider
                 trackStyle={{ backgroundColor: "#04d361" }}
                 railStyle={{ backgroundColor: "#9f75ff" }}
-                handleStyle={{ backgroundColor: "#04d361" }}
+                handleStyle={{ backgroundColor: "#04d361", borderWidth: 4 }}
               />
             ) : (
               <div className={styles.emptySlider} />
@@ -53,7 +53,7 @@ export function Player() {
 
         {episode && <audio src={episode.url} autoPlay />}
 
-        <div className={styles.button}>
+        <div className={styles.buttons}>
           <button type="button" disabled={!episode}>
             <img src="/shuffle.svg" alt="embaralhar" />
           </button>

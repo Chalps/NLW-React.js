@@ -92,12 +92,14 @@
   }
 }
 
-.button {
+.buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 2.5rem;
   gap: 1.5rem;
+
+  transition: filter 0.2s;
 
   button {
     background: transparent;
@@ -109,11 +111,19 @@
       cursor: not-allowed;
     }
 
+    &:hover:not(:disabled) {
+      filter: brightness(0.8);
+    }
+
     &.playButton {
       width: 4rem;
       height: 4rem;
       border-radius: 1rem;
       background: var(--purple-300);
+
+      &:hover:not(:disabled) {
+        filter: brightness(0.95);
+      }
     }
   }
 }
